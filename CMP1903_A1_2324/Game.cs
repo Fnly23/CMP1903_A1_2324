@@ -23,6 +23,16 @@ namespace CMP1903_A1_2324
         public Die Die2;
         public Die Die3;
         public int sum_of_dice;
+        
+        public Game() { 
+        
+        Die3 = new Die();
+        Die2 = new Die();
+        Die1 = new Die();
+
+        }   
+        
+        
         public int RollingGame() 
         {
         
