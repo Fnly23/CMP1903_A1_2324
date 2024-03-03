@@ -18,13 +18,27 @@ namespace CMP1903_A1_2324
          * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
          * rolls could be continous, and the totals and other statistics could be summarised for example.
          */
+//
+        public Die Die1;
+        public Die Die2;
+        public Die Die3;
+        public int sum_of_dice;
+        public int RollingGame() 
+        {
+        
+            //
+        Console.WriteLine("Press 'Enter' to roll the dice now... ");
+        Console.ReadKey();
+            //
+            sum_of_dice += Die1.RollTheDice(); Die2.RollTheDice(); Die3.RollTheDice();
+            Console.WriteLine("The dice you roll were: ");
+            Console.WriteLine(Die1.DiceCurrentValue);
+            Console.WriteLine(Die2.DiceCurrentValue);
+            Console.WriteLine(Die3.DiceCurrentValue);
+            Console.WriteLine("The number of all of the dice added together is: {0} ", (sum_of_dice));
+            return sum_of_dice;
 
-
-
-       // Random rng = new Random();
-       // int dice1 = rng.Next(1, 7);
-       // int dice2 = rng.Next(1, 7);
-       // int dice3 = rng.Next(1, 7);
+        }
 
 
 
