@@ -14,8 +14,26 @@ namespace CMP1903_A1_2324
          * and one method that rolls the die, returns and integer and takes no parameters.
          */
 
-        //Property
+        Random rng = new Random();
 
+        public int DiceCurrentValue;
+        public Die() 
+        
+
+        {
+            DiceCurrentValue = 0;
+       
+        
+        }
+
+        public int RollTheDice() 
+        {
+        DiceCurrentValue = rng.Next(1, 7);
+
+        return DiceCurrentValue;
+
+
+        }
 
 
 
