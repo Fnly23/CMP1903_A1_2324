@@ -16,28 +16,22 @@ namespace CMP1903_A1_2324
          * Use debug.assert() to make the comparisons and tests.
          */
         public static void Test()
-       {
-           Game game = new Game();
-           int sum_of_dice = game.RollingGame();
+        {
+        Game game = new Game();
+        int SumOfDice = game.RollingGame();
 
-            // debug asserting which will allow to find the individual dice rolls
-            Debug.Assert(game.Die1.DiceCurrentValue >= 1 && game.Die1.DiceCurrentValue <= 6, "Dice 1 is out of range");
-            Debug.Assert(game.Die2.DiceCurrentValue >= 1 && game.Die2.DiceCurrentValue <= 6, "Dice 2 is out of range");
-            Debug.Assert(game.Die3.DiceCurrentValue >= 1 && game.Die3.DiceCurrentValue <= 6, "Dice 3 is out of range");
+// debug asserting which will allow to find the individual dice rolls
+        Debug.Assert(game.Die1.DiceCurrentValue >= 1 && game.Die1.DiceCurrentValue <= 6, "Dice 1 is out of range");
+        Debug.Assert(game.Die2.DiceCurrentValue >= 1 && game.Die2.DiceCurrentValue <= 6, "Dice 2 is out of range");
+        Debug.Assert(game.Die3.DiceCurrentValue >= 1 && game.Die3.DiceCurrentValue <= 6, "Dice 3 is out of range");
 
-         // the debug asserting tool is used to find the total value and make sure it is the correct number
-         // it assigns the expected total to the values of the total from the game class
-         int ExpectedTotal = game.Die1.DiceCurrentValue + game.Die2.DiceCurrentValue + game.Die3.DiceCurrentValue;
-            Debug.Assert(sum_of_dice == ExpectedTotal, $"Unexpected total: {sum_of_dice}");
+// the debug asserting tool is used to find the total value and make sure it is the correct number
+// it assigns the expected total to the values of the total from the game class
+        int ExpectedTotal = game.Die1.DiceCurrentValue + game.Die2.DiceCurrentValue + game.Die3.DiceCurrentValue;
+        Debug.Assert(SumOfDice == ExpectedTotal, $"Unexpected total: {SumOfDice}");
 
-            Console.WriteLine("Tests passed successfully.");
+        Console.WriteLine("Tests passed successfully.");
 
         }
-
-
-
-
-
-        //Method
     }
 }

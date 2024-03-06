@@ -24,45 +24,35 @@ namespace CMP1903_A1_2324
         public Die Die1;
         public Die Die2;
         public Die Die3;
-        public int sum_of_dice;
+        public int SumOfDice;
         
-        public Game() {
-
-         Random rng = new Random();
+        public Game() 
+        {
+// this makes sure that every dice is completely random
+        Random rng = new Random();
         Die3 = new Die(rng);
         Die2 = new Die(rng);
         Die1 = new Die(rng);
 
-        }   
-        
-        
-        public int RollingGame() 
+        }
+        public int RollingGame()
         {
-        
-            //
+
+// this makes sure that you can read the dice rolls 
         Console.WriteLine("Press 'Enter' to roll the dice now... ");
         Console.ReadKey();
-            //
-            sum_of_dice += Die1.RollTheDice();
-            
-            sum_of_dice += Die2.RollTheDice();
-            sum_of_dice += Die3.RollTheDice();
-            Console.WriteLine("The dice you roll were: ");
-            Console.WriteLine(Die1.DiceCurrentValue);
-            Console.WriteLine(Die2.DiceCurrentValue);
-            Console.WriteLine(Die3.DiceCurrentValue);
-            Console.WriteLine("The number of all of the dice added together is: {0} ", (sum_of_dice));
-            return sum_of_dice;
+// the following chunk is the dice being rolled and then added together into one variable
+        SumOfDice += Die1.RollTheDice();
+        SumOfDice += Die2.RollTheDice();
+        SumOfDice += Die3.RollTheDice();
+// printing out which dice is which roll.
+        Console.WriteLine("The dice you roll were: ");
+        Console.WriteLine(Die1.DiceCurrentValue);
+        Console.WriteLine(Die2.DiceCurrentValue);
+        Console.WriteLine(Die3.DiceCurrentValue);
+        Console.WriteLine("The number of all of the dice added together is: {0} ", (SumOfDice));
+        return SumOfDice;
 
         }
-
-
-
-
-
-
-
-        //Methods
-
     }
 }

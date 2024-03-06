@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.AccessControl;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,44 +13,22 @@ namespace CMP1903_A1_2324
          * and one method that rolls the die, returns and integer and takes no parameters.
          */
 
-        private Random RandomNumber;
+        private Random _randomNumber;
 
         public int DiceCurrentValue;
         public Die(Random rng) 
         
-
+// this generates the random number for the dice roll. it generates a random number between 1 and 6.
         {
-            this.RandomNumber = rng;
-            DiceCurrentValue = 0;
-       
-        
+        this._randomNumber = rng;
+        DiceCurrentValue = 0;
         }
-
         public int RollTheDice() 
         {
-            
-            
-            Random rng = new Random();
-            
-            DiceCurrentValue = RandomNumber.Next(1, 7);
-
-
-           
-            
-            //DiceCurrentValue = rng.Next(1, 7);
-
+        DiceCurrentValue = _randomNumber.Next(1, 7);
         return DiceCurrentValue;
 
 
         }
-
-
-
-
-        //Method
-    
-    
-        
-
     }
 }
